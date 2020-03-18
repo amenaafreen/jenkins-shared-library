@@ -36,7 +36,7 @@ def createTestJob(jobName, repoUrl) {
 }
 
 def buildPipelineJobs() {
-    def repoUrl = "https://gitlab.mynisum.com/amenaafreen/spring-boot-app.git"
+    def repoUrl = "https://github.com/amenaafreen/springbootwebapp.git"
     def packageName = "job_package"
     def testName = "job_test"
 
