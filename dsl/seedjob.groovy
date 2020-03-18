@@ -7,6 +7,10 @@ def createPackageJob(jobName, repoUrl) {
                         remote {
                             url(repoUrl)
                         }
+                        branches('master')
+                        extensions {
+                            cleanBeforeCheckout()
+                        }
                     }
                 }
                 scriptPath("Jenkinsfile")
