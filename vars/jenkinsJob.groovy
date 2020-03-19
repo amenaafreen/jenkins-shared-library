@@ -16,15 +16,17 @@ def call(){
 def packageArtifact(){
     stage("Package artifact") {
         def mvn_version = 'M3'
-withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
         sh "mvn clean package"
     }
+}
 }
 
 def buildAndTest(){
     stage("Backend tests"){
      def mvn_version = 'M3'
-withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
+     withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ){
            sh "mvn clean test"
-    }
+       }
+     }
 }
