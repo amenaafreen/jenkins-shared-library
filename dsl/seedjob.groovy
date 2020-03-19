@@ -28,6 +28,9 @@ def createTestJob(jobName, repoUrl) {
                         remote {
                             url(repoUrl)
                         }
+                        branches('master')
+                        extensions {
+                            cleanBeforeCheckout()
                     }
                 }
                 scriptPath("Jenkinsfile")
@@ -35,8 +38,7 @@ def createTestJob(jobName, repoUrl) {
         }
     }
 
-
-
+  }
 }
 
 def buildPipelineJobs() {
