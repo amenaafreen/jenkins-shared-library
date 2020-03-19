@@ -20,11 +20,5 @@ def createPackageJob(jobName, repoUrl) {
 }
 
 
-def buildPipelineJobs() {
-    def repoUrl = "https://github.com/amenaafreen/springbootwebapp.git"
-    def packageName = "job_package"
-
-    createPackageJob(packageName, repoUrl)
-}
 
 buildPipelineJobs()
